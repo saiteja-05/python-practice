@@ -1,0 +1,267 @@
+
+'''
+#1. Write program to accept two numbers from user and use divide function
+#to divide two numbers. Implement exception handling to check it divisor
+#is ZERO.
+
+try:
+    num1=int(input("enter number"))
+    num2=int(input("enter number"))
+    print(num1/num2)
+except ZeroDivisionError:
+    print("u entered divior as 0 ")
+except Exception:
+    print("wrong input")
+
+'''
+
+'''
+2. Accept age,height,weight,name and surname for user.age should be an integer, height and weight should be floats,
+and name and surname should be strings.If the user enters input of the incorrect type, keep prompting the user
+for the same value until it is entered correctly. Give the user sensible feedback.
+
+while(1):
+    try:
+        age=int(input("Enter age : "))
+        name =input("Enter name :")
+        surname=input("Enter Surname : ")
+        height=float(input("Enter height : "))
+        weight=float(input("Enter Weight : "))
+    except:
+        print(" Please enter age in int , height and weight in float and name and surname as string value")
+    else:
+        print(f" name : {name} \n Surname:{surname} \n age:{age} \n height:{height} \n weight={weight}")
+        break
+'''
+
+
+
+
+
+'''
+3. Add a try-except statement to the body of this function which handles a
+possible IndexError, which could occur if the index provided exceeds the
+length of the list. Print an error message if this happens:
+def print_list_element(thelist, index): print(thelist[index])
+'''
+'''
+def print_list_element(thelist, index):
+    try:
+        print(thelist[index])
+    except IndexError as e:
+        print("List index is out of range ",e)
+    except Exception as e:
+        print("other error ",e)
+
+
+lst=[10,20,30]
+print_list_element(lst,1)
+print_list_element(lst,10)
+'''
+
+
+
+
+
+
+'''
+4. This function adds an element to a list inside a dict of lists.
+Rewrite it to use a try-except statement which handles a possible
+KeyError if the list with the name provided does not exist in the dictionary.
+Include else and finally clauses in your try-except block:
+
+def add to_list_in_dict(thedict, listname, element):
+
+if list name in the dict:
+
+|= thedict[listname]
+
+print("%s already has %d elements." % (listname, len()))
+
+else:
+
+thedict[listname] = []
+
+print("Created %." % list name) thedict[last name].append(element)
+
+'''
+'''
+def add_to_list_in_dict(thedict, listname, element):
+    try:
+        l = thedict[listname]
+    except KeyError:
+        thedict[listname] = []
+        print("Created %s." % listname)
+    else:
+        print("%s already has %d elements." % (listname, len(l)))
+    finally:
+        thedict[listname].append(element)
+        print("Added %s to %s." % (element, listname))
+        print(thedict)
+
+dic={}
+add_to_list_in_dict(dic,"Mylist", 10)
+add_to_list_in_dict(dic,"Mylist", 20)
+'''
+
+
+'''
+5. Write a program to accept age from user and check if user
+age is valid for voting or not, raise InvaliddataException
+if user enter <18 value. also handle all possible
+exceptions.
+'''
+'''
+try:
+    age=int(input("enter age : "))
+    if age > 18:
+        print("You can vote")
+    else:
+        raise Exception("Invalid age")
+
+except ValueError as e:
+    print("Wrong input",e)
+except Exception as e:
+    print(e)
+
+'''
+    #or
+'''
+    class InvalidageException(Exception):
+    def __init__(self,err):
+        self.msg=err
+    
+
+try:
+    age=int(input("enter age : "))
+    if age > 18:
+        print("You can vote")
+    else:
+        raise InvalidageException("Invalid age")
+
+except ValueError as e:
+    print("Wrong input",e)
+except InvalidageException as e:
+    print("InvalidageException : ",e)
+except Exception as e:
+    print(e)
+'''
+
+'''
+6. write program to accept ,display list of numbers. use Search By
+Position function to search element from list(by position.
+accept pos and element from user). check following things.
+1. Check if position is grater than list size. (raise exception)
+2. if element is not available.(raise exception) 3.You have to catch
+all the raise exceptions also.
+'''
+class InvalidPosition(Exception):
+    pass
+
+def SearchByPosition(lst,ele,pos):
+    try:
+        if pos >= len(lst):
+            raise InvalidPosition
+        if ele != lst[pos]:
+            raise Exception("element not present at given postion")
+        else:
+            print("element is available")
+    except InvalidPosition:
+        print("User has enter invalid position")
+    except Exception as e:
+        print(e)
+
+              
+try:
+    no =int(input("Please enter no of elements to enter in list"))
+    lst=[]
+    for x in range(no):
+        lst.append(int(input("Enter Numeric Element : ")))
+
+    print(lst)
+
+    ele=int(input("Enter ele to search in list : "))
+    pos=int(input("Enter pos to search in list : "))
+    SearchByPosition(lst,ele,pos)
+except Exception as e:
+    print("Exception occured ",e)
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

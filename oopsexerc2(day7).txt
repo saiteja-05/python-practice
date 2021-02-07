@@ -1,0 +1,287 @@
+
+'''
+#1. Create a Person class pid.pname,emailed.mob no(instance variables)
+#Write init display method
+
+
+
+class person:
+    def __init__(self,id,name,email,mobnum):
+        self.pid=id
+        self.name=name
+        self.mail=email
+        self.mobile=mobnum
+
+    def display(self):
+        print("id: ",self.pid)
+        print("name: ",self.name)
+        print("mail: ",self.mail)
+        print("mobile: ",self.mobile)
+
+
+
+p1=person(1,"sai","saa@gmai.com",9030309)
+
+p1.display()
+'''
+
+
+'''
+2. Create a class Employee child of PersonDept,desg,sal Write init, setter,
+getter,override display method Write method
+calculateNetSal -Netsal=sal+10% of sal+15% of sal-5% of sal
+'''
+'''
+class person:
+    def __init__(self,id,name,email,mobnum):
+        self.pid=id
+        self.name=name
+        self.mail=email
+        self.mobile=mobnum
+
+    def display(self):
+        print("id: ",self.pid)
+        print("name: ",self.name)
+        print("mail: ",self.mail)
+        print("mobile: ",self.mobile)
+
+class employee(person):
+    def __init__(self,i,nm,em,mob,dept,desg,sal):
+        person.__init__(self,i,nm,em,mob)
+        self.dept=dept
+        self.desg=desg
+        self.sal=sal
+
+        
+    def display(self):
+        super().display()
+        print("deptartment:",self.dept)
+        print("designation:",self.desg)
+        print("salary:",self.sal)
+
+
+    def calnetsal(self):
+        
+        self.netsal=self.sal+(self.sal*10/100)+(self.sal *15/100)-(self.sal*5/100)
+        return self.netsal
+
+
+    
+
+    def getdept(self):
+        return self.dept
+
+    def setdept(self,dp):
+        self.dept=dp
+
+    def getdesg(self):
+        return self.desg
+
+    def setdesg(self,dg):
+        self.desg=dg
+
+    def getsal(self):
+        return self.sal
+
+    def setsal(self,s):
+        self.sal=s
+        
+
+   
+
+
+e1=employee(2,"Rad","rad@gmail.com",2145789,"mobiles","Manager",450000)
+e1.display()
+print("Net salary : ",e1.calnetsal())
+
+'''
+ 
+        
+'''
+#3. Create a class Member is child of Person
+#membertype, amt Paid Write in,setter getter,
+#override display method
+
+class person:
+    def __init__(self,id,name,email,mobnum):
+        self.pid=id
+        self.name=name
+        self.mail=email
+        self.mobile=mobnum
+
+    def display(self):
+        print("id: ",self.pid)
+        print("name: ",self.name)
+        print("mail: ",self.mail)
+        print("mobile: ",self.mobile)
+
+
+class member(person):
+    def __init__(self,id,name,email,mobnum,membertype,amtpaid):
+        super().__init__(id,name,email,mobnum)
+        self.membertype=membertype
+        self.amtpaid=amtpaid
+
+    def display(self):
+        super().display()
+        print("membertype:",self.membertype)
+        print("amt paid :",self.amtpaid)
+
+
+    def getmembertype(self):
+        return self.membertype
+
+    def setmembertype(self,mt):
+        self.membertype=mt
+
+    def getamtpaid(self):
+        return self.amtpaid
+
+    def setamtpaid(self,amt):
+        self.amtpaid=amt
+
+
+m=member(3,"sd","sd@gmail.com",981234,"temporory",6450)
+    
+m.display()
+
+'''
+
+
+
+'''
+4. Create object of all classes and call display as well as calculateNetSal method.
+
+
+
+p1=person(1,"sai","saa@gmai.com",9030309)
+
+p1.display()
+
+
+e1=employee(2,"Rad","rad@gmail.com",2145789,"mobiles","Manager",450000)
+e1.display()
+print("Net salary : ",e1.calnetsal())
+
+
+
+m=member(3,"sd","sd@gmail.com",981234,"temporory",6450)
+    
+m.display()
+'''
+
+
+'''
+5. Write a program to create class shape and inherit
+that to circle, triangle and rectangle class.
+write calculate Area method in shape and override
+that in all child classes.
+'''
+class shape:
+    def calarea(self):
+        print("this is shape")
+
+
+class circle(shape):
+
+    def __init__(self,r):
+        self.radius=r
+
+    def calarea(self):
+        print("area of cirlce is :",3.14*self.radius*self.radius)
+        
+        
+class triangle(shape):
+
+    def __init__(self,b,h):
+        self.base=b
+        self.height=h
+
+    def calarea(self):
+        print("area of triangle is :",(self.base*self.height)/2)
+
+
+class square(shape):
+
+    def __init__(self,s):
+        self.side=s
+
+    def calarea(self):
+        print("area of square is :",self.side*2)
+
+
+class rectangle(shape):
+
+    def __init__(self,l,b):
+        self.length=l
+        self.breadth=b
+
+    def calarea(self):
+        print("area of rectangle is :",self.length*self.breadth)
+
+
+s=shape()
+s.calarea()
+
+c=circle(12)
+c.calarea()
+
+s=square(5)
+s.calarea()
+
+r=rectangle(2,3)
+r.calarea()
+
+t=triangle(3,2)
+t.calarea()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
