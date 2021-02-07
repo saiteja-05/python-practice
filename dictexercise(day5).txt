@@ -1,0 +1,218 @@
+'''
+#1. Write a program to Add a Key-Value Pair to the Dictionary.
+dic={1:20,"name":23,"sal":(10.20)}
+print(dic)
+dic[2]="hello"
+print("after update: ")
+dic.update({3:"hi"})
+print(dic)
+'''
+
+'''
+#2. Write a program to Concatenate Two Dictionaries Into One.
+dic={1:20,"name":23,"sal":(10.20)} #using update
+dic1 = {2:32,3:32}
+dic.update(dic1)
+
+print(dic)
+print("------------")
+dic2 = {3:34,4:54}   #using merging 
+dic3={5:45,6:43}
+d4={**dic2,**dic3}
+
+print(d4)
+'''
+
+
+'''
+#3. Write a program to Generate a Dictionary that Contains
+#Numbers (between 1 and n) in the Form(x, x*x*x)
+n = int(input("enter the n value :"))
+res = {x:x*x*x for x in range(1,n+1)}
+
+print(res)
+'''
+
+
+'''
+#4. Write a program to Multiply All the Items in a Dictionary.
+dic = {1:1,2:2,3:3,4:4}
+x=1
+for i in dic.values():
+    x=x*i
+print(x)   
+
+#or
+for i in dic:
+    x=x*i
+print(x)   
+'''
+
+'''
+
+#5. Write a program to Remove the Given Key from a Dictionary.
+dic = {1:23,2:34,3:54,4:65}
+
+x= int(input("enter the key need to be removed :"))
+
+del dic[x]   #using del
+
+print(dic)
+dic.pop(1) #using pop method
+print(dic)
+'''
+
+'''
+#6. Rename key state to location in the following dictionary
+#sample Dict = { "name": "Ramu", "age":25, "state": "Goa'}
+#Expected output:{"name": "Ramu", "age":25, "location": "Goa"}
+details = { "name": "Ramu", "age":25, "state": "Goa"}
+print(details)
+details["location"]=details.pop("state")
+print(details)
+#or
+
+de = { "name": "Ramu", "age":25, "state": "Goa"}
+print(de)
+de.pop("state")
+de.update({"location":"goa"})
+print(de)
+'''
+
+'''
+#7. Write a program to Map Two Lists into a Dictionary (use zip function).
+l1=[1,2,3]
+l2=["rig","skin","ck"]
+
+x=dict(zip(l1,l2))
+print(x)
+'''
+
+
+#8. Write a program to add, update, display, find and delete cource in
+#dictionary (create menu driven program).
+
+
+dic={1:12,2:23,3:32,4:43}
+choice = input("enter option of ur choice(add,update,display,find,delete) :")
+if (choice=='add'):
+    x=int(input("enter key :"))
+    y=int(input("enter value :"))
+    dic[x] = y
+    print(dic)
+elif (choice == 'update'):
+    x=int(input("enter key to be updated :"))
+    y=int(input("enter value :"))
+    dic[x]=y
+    print(dic)
+elif (choice=='display'):
+    print(dic)
+elif (choice == "delete"):
+    print(dic)
+    x=int(input("enter key to be deleted :"))
+    del dic[x]
+    print(dic)
+elif (choice=='find'):
+    print(dic)
+    x=int(input("enter the key to be searched : "))
+    print(dic[x])
+   
+else:
+    print("choose correct option ")
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''
+9. Create a dict directory which stores telephone numbers
+(as string values), and populate it with these key value pairs:
+
+1.
+
+Name                               Telephone number
+
+Madhura kale                        9685968911
+
+Ram Kulkarni                        9685967485
+
+Rama Londhe                         9682368919
+'''
+'''
+phn_book = {"Madhura kale":9685968911,"Ram Kulkarni":9685967485,"Rama Londhe":9682368919}
+print(phn_book)
+
+#2. Change Madhura ?s number to 9155510245
+phn_book["Madhura kale"]=9155510245
+print(phn_book)
+#or
+phn_book.update({"Madhura kale":9155510245})
+
+#3. Add a new entry for a person called Ankita Deshpande with the
+#phone number +9855532375
+phn_book["Ankita Deshpande"] = +9855532375
+print(phn_book)
+
+#4. Print Ram ?s number.
+print("Kulkarni number is :",phn_book['Ram Kulkarni'])
+
+#5. Print Ram ?s number in such a way that None would be printed
+#if Ram ?s name were not  in the dictionary
+
+print(phn_book.get("Ram Kulkarni"))
+phn_book.pop("Ram Kulkarni")
+
+print(phn_book.get("Ram Kulkarni"))
+
+
+#6. Print all the keys.
+print(phn_book.keys())
+
+#7. Print all the values
+print(phn_book.values())
+
+'''
+
+'''
+#10. Given a dictionary of students and their favourite colours:
+
+people={'Arham': Blue','Monika':Red', Lisa':'Yellow',"Vinod:'Purple',
+        Jenny: Pink}
+'''
+
+'''
+people={'Arham': 'Blue','Monika':'Red', 'Lisa':'Yellow',"Vinod":'Purple',
+        'Jenny': 'Pink'}
+
+print(people)
+
+
+#1. Find out how many students are in the list
+print(len(people))
+
+
+#2. Change Lisa?s favourite colour
+
+people['Lisa'] = "orange"
+print(people)
+
+#3. Remove 'Jenny' and her favourite colour
+
+del people['Jenny']
+
+print(people)
+
+#4. Sort and print students and their favourite colours
+#alphabetically by name.
+
+print(sorted(people.items()))                                                                          

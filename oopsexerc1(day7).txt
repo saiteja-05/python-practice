@@ -1,0 +1,330 @@
+
+'''
+#1. Write a Python class to implement pow (x, n)Create Constructor, Destructor
+#and pow function
+
+class power():
+    #constructor
+    def __init__(self,x,n):
+        self.num=x
+        self.ex=n
+        print("inside constructor")
+        
+    #destructor
+    def __del__(self):
+        print("Destroted !!!")
+        
+    #method
+    def pow(self):
+        self.ans=self.num**self.ex
+
+    #displaymethod
+    def display(self):
+        print("x: ",self.num)
+        print("n: ",self.ex)
+        print("x^n : ",self.ans)
+        
+p1=power(2,3)
+
+p1.pow()
+
+p1.display()
+
+del p1
+
+p1
+
+'''
+
+'''
+
+#2. Write a Python class to reverse a string word by word. Input string : I love my india
+#Expected Output : 'india my love l
+
+#st="I love my india"
+#st=st.split(" ")
+
+#print(st[::-1])
+
+#x=str(st[::-1])
+#print(x)
+
+
+class rev:
+    def __init__(self,st):
+        self.s=st
+
+    def reversing(self):
+        self.s = self.s.split(" ")
+        self.ans = str(self.s[::-1])
+        print(self.ans)
+        
+
+stp="I love my india"
+
+r=rev(stp)
+
+r.reversing()
+
+
+'''
+
+
+
+'''
+#3. Write a Python class which has two methods get_String and print_String.
+#get_String accept a string from the user and print_String print the string
+#in upper case.
+
+
+class pyi:
+
+    def get_name(self):
+        return self.name
+
+    def set_name(self,nm):
+        self.name=nm
+
+d=pyi()
+
+d.set_name(input("enter name :"))
+
+print(d.get_name())
+
+'''
+
+
+'''
+#4. Write a Python class named Rectangle constructed by a length
+#and width and a method which will compute the area of a rectangle.
+
+class rectangle:
+    length=0
+    width=0
+
+    def __init__(self):
+        
+        print("hi")
+
+    def area(self):
+        print("Area of rectanlge :",self.length*self.width)
+
+
+
+r1= rectangle()
+r1.length=2
+r1.width=3
+
+r1.area()
+
+'''
+
+'''
+5. Create a Temperature class. Make two methods :
+    1. convert Fahrenheit - It will take celsius and will
+    print it into Fahrenheit.
+    2. convert Celsius - It will take Fahrenheit and will
+    convert it into Celsius.
+'''
+
+'''
+class temp():
+    def __init__(self,te):
+        self.tem=te
+        print("tem entered is ",te)
+
+    def toFahrenheit(self):
+        print("IN Fahrenheit : ",self.tem*1.8+(32))
+
+
+    def toCelsius(self):
+        print("IN Celsius : ",(self.tem-32)/(1.8))
+
+
+t1=temp(23)
+
+t1.toFahrenheit()
+
+t1=temp(74)
+
+t1.toCelsius()
+
+'''
+
+
+
+
+'''
+6. Create a Student class and initialize it with name and roll
+number. Make methods to : Display - It should display all
+informations of the student.
+setAge - It should assign age to student
+setMarks - It should assign marks to the student.
+'''
+
+'''
+class student:
+    name=''
+    rollno=0
+
+    def setAge(self,ag):
+        self.age=ag
+
+    def getAge(self):
+        return self.age
+
+    def setMarks(self,mks):
+        self.marks=mks
+
+    def getMarks(self):
+        return self.marks
+
+
+
+s1=student()
+
+s1.name="sai"
+s1.rollno=12
+
+s1.setAge(20)
+
+s1.setMarks(40)
+
+print(s1.name)
+
+print(s1.rollno)
+
+print(s1.getAge())
+
+print(s1.getMarks())
+'''
+
+
+'''
+7. Create a Time class and initialize it with hours and minutes.
+
+1. Make a method addTime which should take two time object
+and add them and create third object.
+Eg.- (2 hour and 50 min)+(1 hr and 20 min) is (4 hr and 10 min)
+
+2. Make a method displayTime which should print the time.
+
+3. Make a method DisplayMinute which should display the total
+minutes in the Time. E.g.-1hr 2 min) should display 62 minutes
+
+'''
+
+'''
+class time():
+    hh=0
+    mm=0
+
+    def addtime(self,t2):
+        t3=time()
+        t3.hh=self.hh+t2.hh
+        t3.mm=self.mm+t2.mm
+        return t3
+
+    def displayTime(self):
+        print("time is ",self.hh,':',self.mm)
+
+
+    def displayMinute(self):
+        print("in minutes : ",self.hh*60+self.mm)
+
+
+t1=time()
+t1.hh=2
+t1.mm=20
+
+
+t2=time()
+t2.hh=3
+t2.mm=10
+
+t3=t1.addtime(t2)
+
+print(t3.hh,t3.mm)
+
+t2.displayTime()
+
+t1.displayMinute()
+'''
+
+
+
+
+'''
+8. Create class dealers store id, name,mobile and full address.
+create 5 objects
+find detailers which matches following condition:
+1. find dealer who leaves in pune
+2. find dealer having mobile no palindrome
+
+'''
+
+class Dealers:
+
+    def __init__(self,strid,nm,mbno,adr):
+        self.storeid=strid
+        self.name=nm
+        self.mobile=mbno
+        self.address=adr
+
+    def Matchaddress(self):
+        if(self.address == 'pune'):
+            print("dealer in pune ",self.name)
+
+    def MobilePalindrome(self):
+        if (self.mobile == self.mobile[::-1]):
+            print("mobile no palindrome has  ",self.name)
+    
+
+lst=[]
+
+lst.append(Dealers(1,"sai","90309","pune"))
+lst.append(Dealers(2,"sorry","91219","sdf"))
+lst.append(Dealers(3,"Mr","902332","fvefv"))
+lst.append(Dealers(4,"rpy","94234","egfer"))
+
+
+for obj in lst:
+    obj.Matchaddress()
+    obj.MobilePalindrome()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
