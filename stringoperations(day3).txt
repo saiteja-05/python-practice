@@ -1,0 +1,161 @@
+'''
+#1.replace all occurances of "a" with "$" in string
+
+name = input("enter string : ")
+
+print(name.replace('a','$'))
+'''
+
+'''
+#2.program to remove the nth index character  from a non empty string
+
+name = input("enter the string : ")
+index = int(input("enter the index position : "))
+
+first = name[:index]
+last = name[index+1:]
+print(first+last)
+
+#print(name.replace('a','',1)) for replacing with empty space
+'''
+
+'''
+#3.count the no of vowels in string
+
+name = input("Enter the string : ")
+count =0
+
+for i in name:
+    if(i=='a' or i== 'e' or i=='o' or i=='u'or i=='A' or i== 'E' or i=='O' or i=='U'):
+        count = count+1
+
+print("no of vowels are :",count)
+'''
+
+'''
+#4.write a program to take string and replce empty space with -
+name = input("enter the string : ")
+
+print(name.replace(" " ,'-'))
+'''
+
+'''
+#5.cal length of string with out library function
+
+name = input("enter string : ")
+
+count = 0
+for i in name:
+    count = count+1
+
+print("lenght of name is " ,count)
+
+'''
+
+'''
+#6.remove characters of odd index in a string
+
+
+name = input("enter string : ")
+result = ""
+
+for i in range(len(name)):
+    if(i%2 == 0) :
+        result = result+name[i]
+print(result)
+'''
+'''
+#7.program to find lenght of uppercase and lower case letters in string
+
+name = input("enter the string : ")
+
+print(name)
+countupper,countlower=0,0
+for i in name:
+    if (i >= 'A' and i <= 'Z'):
+        countupper = countupper+1
+    elif(i >='a' and i <= 'z'):
+        countlower = countlower+1
+    else:
+        print("they  are symbols") 
+print("upper case letter count is :",countupper)
+print("upper case letter count is :",countlower)
+
+#OR
+
+for i in range(len(str)): 
+        if str[i].isupper(): 
+            upper += 1
+        elif str[i].islower(): 
+            lower += 1
+        elif str[i].isdigit(): 
+            number += 1
+        else: 
+            special += 1
+
+'''
+
+'''
+#8.CHECK WHETHER STRING IS PALINDROME OR NOT
+
+name = input("enter the string : " )
+
+if (name == name[::-1]):
+    print("it is palindrome ")
+else :
+    print("not palindrome")
+
+'''
+
+'''
+#9.write a program to get string made of first 2 and last 2 chars
+#from given string.if string length is less than 2 return empty string
+
+name = input("enter string : ")
+
+if len(name) >2 :
+    newname = name[:2]+name[-2:]
+    print(newname)
+else:
+    print(" ")
+
+'''
+'''
+#10.write a program to check whether a string starts with specified character
+
+name = input("enter the string :")
+char = input("enter the character to check : ")
+
+if name.startswith(char):
+    print("yes")
+else:
+    print("No")
+'''
+
+#11.accept name age,salary and display using formating methods of default,positional,keyword and f-format and %
+#(o/p: "Hello,name you are age years and getting salary of salary")
+
+name = input("enter name : ")
+age = int(input("enter age: "))
+salary = float(input("enter salary: "))
+#using %
+print("Hello,%s you are %d years old and getting salary of %f"%(name,age,salary))
+
+#using default
+print("Hello,{} you are {} years old and getting salary of {}".format(name,age,salary))
+
+#using position
+print("Hello,{0} you are {2} years old and getting salary of {1}".format(name,age,salary))
+
+#using keywords
+print("Hello,{x} you are {y} years old and getting salary of {z}".format(x=name,y=age,z=salary))
+
+#usinf f-functoin
+print(f"Hello,{name} you are {age} years old and getting salary of {salary},{2*3}")
+
+
+
+
+
+
+
