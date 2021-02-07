@@ -1,0 +1,118 @@
+
+'''
+#1.Write a program to Create a List of Tuples with theFirst Element as the
+#Number and Second Element as the Square of the Number.(use list comprehension)
+
+tuplist=[(x,x*x) for x in range(1,11)]
+print(tuplist)
+
+'''
+
+'''
+#2. Write a Python program to convert a tuple of vowels to a string.
+tup = ('a','e','i','o','u')
+tup =  ''.join(tup)
+print(tup)
+'''
+
+'''
+#3. Create a tuple num which contains the first four positive integers
+#and numl tuple which contains the next four positive integers.
+num=(1,2,3,4)
+num1=(5,6,7,8)
+#1. Display numl and num2 tuples.
+print(num,num1)
+
+#2. Create a tuple combo which combines all the numbers from num and numl
+#in any order
+num3=num1+num
+print("after adding 2 tuples :",num3)
+
+#3. Create a tuple combo2 which is a sorted copy of combo order.
+combo2 = sorted(num3)
+print("sorted copy :",combo2)
+#4. Print the third element of combo2.
+print(combo2[2])
+
+#5. Print the last three elements of combo2 without using its length.
+print(combo2[-3:])
+#6. Print the length of combo2.
+print(len(combo2))
+'''
+
+'''
+
+#4. Create a tuple with different data types. print 4th tuple element
+#from first and 2nd tuple element from last.
+
+tup = ((1,2,),"sai",[3,4],5.3,4,6)
+print(tup[3])
+print(tup[-2])
+
+'''
+
+'''
+
+#5. Write a Python program to find the repeated items(aceept item for user)
+#of a tuple (1,2,5,6,3,8,5,2,1,4,6)
+tup =(1,2,5,6,3,8,5,2,1,4,6)
+choice = int(input("enter the item to search the repetation : "))
+print(tup.count(choice))
+
+'''  
+        
+
+
+
+
+
+
+
+
+
+#6. Write a Python program to check whether an element (accept element from user)
+#exists within a tuple.
+
+tup = (1,2,3,4,5)
+ch = int(input("enter element : "))
+
+if ch in tup:
+    print("it is present")
+    print(tup.index(ch))
+else:
+    print("not present")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
