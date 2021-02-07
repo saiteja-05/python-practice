@@ -1,0 +1,118 @@
+'''
+#1.reverse of given num
+
+num  = int(input("Enter number to reverse : "))
+
+rev = 0
+
+while(num != 0 ):
+    rem = num%10
+    rev = (rev*10)+rem
+    num = num//10
+print("rev num is :",rev)
+'''
+
+'''
+#2.sum of digits in number
+num  = int(input("Enter number  : "))
+
+add = 0
+
+while(num != 0 ):
+    rem = num%10
+    add = (add)+rem
+    num = num//10
+print("sum  of digits of  num is :",add)
+'''
+
+'''
+#3.count the no of digits in number
+
+num  = int(input("Enter number  : "))
+
+add = 0
+count = 0
+
+while(num != 0 ):
+    rem = num%10
+    #add = (add)+rem
+    num = num//10
+    count = count+1
+print("no of digits in number is : ",count)
+'''
+
+'''
+#4.number is palindrome or not
+
+num  = int(input("Enter number to check palindrome or not : "))
+num1 = int(num)
+rev = 0
+
+while(num != 0 ):
+    rem = num%10
+    rev = (rev*10)+rem
+    num = num//10
+print("rev num is :",rev)
+if (num1 == rev):
+    print(num1," is palindrome")
+else :
+    print(num1 ,"is not palindrome ")
+'''
+
+'''
+#5.generate divisors of number
+
+num = int(input("enter number to cbeck divisors : " ))
+
+for i in range(1,num+1):
+    div = num%i
+    if (div == 0):
+        print(i)
+'''
+
+'''
+#6.table of given num
+
+num = int(input("enter number : " ))
+
+for i in range(1,11):
+    print(num*i)
+'''
+
+'''
+#7.sum of first n natural numbers
+num = int(input("enter the last nth number : " ))
+
+for i in range(1,num+1):
+    add = (num*(num+1))/2
+print("sum of n numbers is : ",add)
+'''
+
+'''
+#8.horizontal table 2 to 15 num and vertical table 2 to 10
+
+for i in range(1,16):
+    print(2*i,end = " ")
+
+for i in range(1,11):
+    print(2*i)
+'''
+
+'''
+#9.accept name of user using for loop and print each letter in sepearte line
+
+name = input("enter name : " )
+
+for i in name:
+    print(i)
+
+'''
+
+#10.accept start and stop range and print odd numbers
+
+start = int(input("enter start position: "))
+stop= int(input("enter stop position: "))
+
+for i in range(start,stop):
+    if(i%2 != 0):
+        print(i)

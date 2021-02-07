@@ -1,0 +1,118 @@
+'''
+#1.write a program to swap 3 numbers with out temp variable
+num1 = 4
+num2 = 5
+num3 = 6
+print(num1,num2,num3)
+
+num1 , num2,num3 = num2,num3,num1
+
+print(num1,num2,num3)
+'''
+
+'''
+#2.program to check number is postive or negative
+num = int(input("enter number : "))
+if num >0 :
+    print(num ,"is positive")
+elif num < 0:
+    print(num ,"is negative ")
+else :
+    print(num ," is equal to zero ")
+'''
+
+
+'''
+#3.program for taking marks and giving grade
+m1 = input("enter marks: ")
+m2 = input("enter marks: ")
+m3 = input("enter marks: ")
+m4 = input("enter marks: ")
+m5 = input("enter marks: ")
+m1 = int(m1)
+m2 = int(m2)
+m3 = int(m3)
+m4 = int(m4)
+m5 = int(m5)
+print("total : ",m1+m2+m3+m4+m5)
+avg = (m1+m2+m3+m4+m5)/5
+if (avg >= 90 ):
+    print("passed with distintion")
+elif (avg >= 50 and avg <=89 ):
+    print(" passed ")
+else:
+    print("fail")
+'''
+
+'''
+#4.program to read no.x and find x+xx+xxx
+
+num = input("enter number : ")
+
+
+x = int(num+num)
+
+y = int(num+num+num)
+
+z = int(num)
+
+print("addition in format of x+xx+xxx : ",z+x+y)
+
+'''
+
+'''
+#5.program to find biggest number among 3
+
+num1 = int(input("enter no 1 :"))
+num2 = int(input("enter no 2 :"))
+num3 = int(input("enter no 3 :"))                     
+
+if(num1 > num3 and num1 >num2):
+           print(num1, "is greater ")
+elif (num2 > num3 and num2 > num1) :
+    print(num2,"is greater")
+elif(num1 == num2 == num3 ) :
+    print("  num1,num2,num3 are equal ")
+else :
+    print(num3,"is greater ")
+
+'''
+
+'''
+#6.program to convert celsius to farenheit
+
+temp = float(input("enter temp in celcius : "))
+
+tempinfrh = (temp*1.8)+32
+
+print("temp in farenheit is : ",tempinfrh)
+'''
+
+
+'''
+#7.program to find simple interest
+
+principalamt = float(input("ENTERprincipal Amt : "))
+time = float(input("enter time : "))
+rate = float(input("enter rate : "))
+
+simple_interest = (principalamt*time*rate)/100
+
+print("simple interest is : ",simple_interest)
+'''
+
+#8.program to convert height in cm to feet
+
+heightincm = float(input("enter height in cm : " ))
+
+inches = (1/2.54)*heightincm
+
+foot = (1/12)*inches
+
+print("in inches : " ,inches,"inches ")
+
+print("in feets : " ,foot,"feet ")
+
+
+
+

@@ -1,0 +1,33 @@
+day1 - 18/9/2020
+
+1. Installation of python
+ 
+	python.org
+
+2. Write a program to print Hello world program on shell
+
+   check version : python --version
+	next : print("hello world ")
+
+3. write a program to accept name and display on shell
+  open prompt: print(input("Enter name " ))
+      in pormpt :give the name     
+
+4. Write a program to print Hello world program using script file
+
+   inside file :   print("hello world ")
+	save with name.py extension and run as python name.py
+
+ 5. write a program to accept name and display on screen using script file
+
+	inside file :   print(input("Enter name " ))
+
+6. write a program to Swap two values.
+
+inside the script file
+           a = 10
+           type(a)
+           b =20
+         print("a :",a,"b: ",b)
+           a ,b = b,c 
+         print("a :",a,"b: ",b)
